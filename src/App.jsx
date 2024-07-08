@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import ActivityLog from "./pages/ActivityLog.jsx";
 import Goals from "./pages/Goals.jsx";
 import SettingsPage from "./pages/Settings.jsx";
+import LogWorkout from "./pages/LogWorkout.jsx";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ const App = () => {
               <Route path="activity-log" element={<ActivityLog />} />
               <Route path="goals" element={<Goals />} />
               <Route path="settings" element={<SettingsPage />} />
+              <Route path="log-workout" element={<LogWorkout />} />
             </Route>
           </Routes>
         </Router>
