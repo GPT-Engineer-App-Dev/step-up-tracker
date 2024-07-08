@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Home, List, Target, Settings } from "lucide-react";
+import { Home, List, Target, Settings, TrendingUp } from "lucide-react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/sidebar"; // Use the sidebar layout
 import Index from "./pages/Index.jsx";
@@ -10,6 +10,7 @@ import ActivityLog from "./pages/ActivityLog.jsx";
 import Goals from "./pages/Goals.jsx";
 import SettingsPage from "./pages/Settings.jsx";
 import LogWorkout from "./pages/LogWorkout.jsx";
+import ProgressTracking from "./pages/ProgressTracking.jsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,11 @@ export const navItems = [
     title: "Goals",
     to: "/goals",
     icon: <Target className="h-4 w-4" />,
+  },
+  {
+    title: "Progress Tracking",
+    to: "/progress-tracking",
+    icon: <TrendingUp className="h-4 w-4" />,
   },
   {
     title: "Settings",
@@ -49,6 +55,7 @@ const App = () => {
               <Route path="goals" element={<Goals />} />
               <Route path="settings" element={<SettingsPage />} />
               <Route path="log-workout" element={<LogWorkout />} />
+              <Route path="progress-tracking" element={<ProgressTracking />} />
             </Route>
           </Routes>
         </Router>
